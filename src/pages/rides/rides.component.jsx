@@ -1,10 +1,11 @@
-import { SectionDiv } from "../section.styles";
+import Banner from "../../components/banner/banner";
 
+import { SectionDiv } from "../section.styles";
 
 const Rides = () => {
 
     return <SectionDiv>
-Rides section
+      <Banner text={"Group rides"} section="grouprides" sectionLength={4}></Banner>
     </SectionDiv>
 }
 

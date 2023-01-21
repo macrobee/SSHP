@@ -2,12 +2,11 @@ import styled from "styled-components";
 
 export const NavBarDiv = styled.div`
   position: fixed;
-  width: min(300px, 27%);
-  height: 100%;
+  width: 100%;
+  height: 10%;
   right: 0;
   top: 0;
   display: flex;
-  flex-direction: column;
   padding: 20px 10px;
   justify-content: space-between;
   align-items: center;
@@ -15,12 +14,16 @@ export const NavBarDiv = styled.div`
   z-index: 4;
   box-sizing: border-box;
   img {
-    height: 175px;
-    width: 175px;
+    height: 50px;
+    width: 50px;
   }
   ul {
     padding: 0;
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
   }
   li {
     list-style-type: none;

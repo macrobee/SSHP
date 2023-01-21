@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import Banner from "./components/banner/background";
 import Home from "./pages/home/home.component";
 import Navbar from "./components/navbar/navbar.component";
 import About from "./pages/about/about.component";
@@ -20,7 +19,7 @@ const navItems = [
 
 function App() {
   return (
-    <div className="App">
+    <div className="font-roboto bg-off w-full h-full">
       <Routes>
         <Route path="/*" element={<Navbar navItems={navItems} />}>
           <Route index element={<Home />} />

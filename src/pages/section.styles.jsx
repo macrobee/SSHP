@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const SectionDiv = styled.div`
-height: 100vh;
-width: 73%;
-overflow: hidden;
+position: relative;
+width: 100%;
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: flex-start;
 align-items: center;
 `
