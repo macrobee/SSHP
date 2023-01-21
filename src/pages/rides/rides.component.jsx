@@ -6,6 +6,7 @@ const Rides = () => {
 
     return <SectionDiv>
       <Banner text={"Group rides"} section="grouprides" sectionLength={4}></Banner>
+      <div>Weekly group rides</div>
     </SectionDiv>
 }
 

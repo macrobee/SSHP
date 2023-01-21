@@ -33,8 +33,8 @@ const Navbar = ({ navItems }) => {
 
   return (
     <Fragment>
-      <div className="w-full h-1/6 flex justify-between items-center p-1/2">
-        <Link to={`/`} className="w-1/12 h-1/12">
+      <div className="w-full h-1/5 flex justify-between items-center p-1 md:h-75 md:pb-1/2 md:pt-1/2">
+        <Link to={`/`} className="w-50 h-50">
           <img className="" src="/sshp/SSHPlogo.png" alt="SSHP logo" />
         </Link>
         {isOpen ? (

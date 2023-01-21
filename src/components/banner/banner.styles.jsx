@@ -17,6 +17,13 @@ export const HeroSection = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
+  div{
+    z-index: 0;
+    position: absolute;
+    background-color: #365314;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 export const SlideshowImage = styled.img`

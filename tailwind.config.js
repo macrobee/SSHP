@@ -10,10 +10,19 @@ module.exports = {
         roboto: ["Roboto", "sans-serif"],
       },
     },
+    height: {
+      75: "75px",
+      50: "50px",
+      30: "30px",
+    },
+    width:{
+      75: "75px",
+      50: "50px",
+      30: "30px",
+    },
     spacing: {
-      
       0: "0",
-      '1/2': "0.5rem",
+      "1/2": "0.5rem",
       1: "1rem",
       2: "2rem",
       3: "3rem",

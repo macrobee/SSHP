@@ -10,8 +10,9 @@ const Banner = ({ text, section, sectionLength }) => {
       <motion.h1 className="text-3xl font-bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
         {text}
       </motion.h1>
-
       <Slideshow section={section} sectionLength={sectionLength} />
+      <div></div>
+
     </HeroSection>
   );
 };
