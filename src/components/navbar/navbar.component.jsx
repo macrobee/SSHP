@@ -60,7 +60,7 @@ const Navbar = ({ navItems }) => {
             {navItems.map((item) => {
               const { path, text } = item;
               return (
-                <li key={path} className="text-green hover:text-pink">
+                <li key={path} className="text-green hover:text-pink duration-300">
                   <Link to={`/${path}`} onClick={toggleIsOpen}>
                     {text}
                   </Link>

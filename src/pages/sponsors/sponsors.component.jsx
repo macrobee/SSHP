@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
+
 import Banner from "../../components/banner/banner";
 import SponsorBox from "./sponsorbox.component";
 
 import { SectionDiv } from "../section.styles";
-import { ContentDiv } from "../content.styles";
 
 const sponsorList = [
   {
@@ -34,6 +35,15 @@ const sponsorList = [
       "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ea distinctio minima veniam omnis expedita magnam iste voluptatum velit atque necessitatibus, rerum a totam magni ab aspernatur error corrupti. Nulla.",
   },
 ];
+const animationVariants = {
+  initial: { y: "50px", x: 0, opacity: 0 },
+  animate: {
+    opacity: 1,
+    y: "0px",
+    x: 0,
+    transition: { staggerChildren: 0.2, ease: "easeInOut", duration: 1 },
+  },
+};
 const Sponsors = () => {
   return (
     <SectionDiv>
@@ -42,21 +52,36 @@ const Sponsors = () => {
         section="sponsors"
         sectionLength={1}
       />
-      <ContentDiv>
-        <p>
+      <motion.div
+        className="flex flex-col gap-2 w-80 md:w-60 pt-3 pb-3"
+        variants={animationVariants}
+        initial="initial"
+        animate="animate"
+      >
+        <motion.p variants={animationVariants}>
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
           sapiente iste, deleniti corporis molestiae aspernatur non fuga vel ea
           voluptatibus soluta temporibus pariatur ducimus excepturi veritatis
           tempora autem exercitationem a!
-        </p>
-        
+        </motion.p>
+
         {sponsorList.map((sponsor) => {
           const { name, image, description } = sponsor;
           return (
-            <SponsorBox name={name} image={image} description={description} />
+            <SponsorBox
+              as={motion.div}
+              variants={animationVariants}
+              reverse={
+                sponsorList.indexOf(sponsor) % 2 === 0 ? "flex-row-reverse" : ""
+              }
+              name={name}
+              image={image}
+              description={description}
+              key={name}
+            />
           );
         })}
-      </ContentDiv>
+      </motion.div>
     </SectionDiv>
   );
 };
