@@ -18,6 +18,7 @@ module.exports = {
     width:{
       75: "75px",
       50: "50px",
+      40: "40%",
       30: "30px",
       80: "80%",
       60: "60%",
@@ -29,6 +30,8 @@ module.exports = {
       1: "1rem",
       2: "2rem",
       3: "3rem",
+      "1/5": "20%",
+      "1/10": "10%",
     },
     colors: {
       transparent: "transparent",

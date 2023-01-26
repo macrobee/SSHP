@@ -71,7 +71,7 @@ const Navbar = ({ navItems }) => {
         </nav>
       </div>
       {isOpen && (
-        <nav className="md:hidden h-7/12 flex justify-end align-center">
+        <nav className="md:hidden h-7/12 flex justify-end align-center fixed z-50 bg-background w-full top-[12%]">
           <ul className="flex flex-col justify-between align-end gap-1 font-bold p-1 pt-0">
             {navItems.map((item) => {
               const { path, text } = item;

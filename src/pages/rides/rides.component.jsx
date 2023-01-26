@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Banner from "../../components/banner/banner";
 
@@ -113,78 +113,90 @@ const animationVariants = {
 
 const Rides = () => {
   return (
-    <SectionDiv>
-      <Banner
-        text={"Group rides"}
-        section="grouprides"
-        sectionLength={4}
-      ></Banner>
-      <motion.div
-        className="flex flex-col gap-2 w-80 md:w-60 pt-3 pb-3"
-        variants={animationVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <motion.p variants={animationVariants}>
-          Stay tuned for our 2023 ride schedule!
-        </motion.p>
-        <motion.p className="italic text-justify" variants={animationVariants}>
-          <span className="font-bold not-italic">Note:</span> Cycling involves
-          many inherent risks. Although we care for each other, it is each
-          rider's responsibility to follow the rules of the road, ride
-          defensively, avoid hazards and cycle safely. By joining Saddle Sisters
-          of High Park ("SSHP") group rides, you acknowledge that you do so at
-          your own risk. Neither SSHP nor its ride leaders/ride organizers
-          assume responsibility to safeguard SSHP ride participants from the
-          risks of cycling (including but not limited to personal injury, death
-          and/or property damage) nor does SSHP nor its ride leaders/ride
-          organizers assume any duty of care for ride participants.
-        </motion.p>
-        <motion.h3 className="text-xl font-bold">
-          2022 weekly ride schedule
-        </motion.h3>
-        {rideList.map((dayInfo) => {
-          const { day, rides } = dayInfo;
-          const rideList = rides.map((ride) => {
-            const { rideName, time, location, pace } = ride;
-            return (
-              <motion.div variants={animationVariants}>
-                <h4 className="text-base font-semibold text-green">
-                  {rideName}
-                </h4>
-                {console.log(day)}
+    <AnimatePresence>
+      <SectionDiv
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{duration:0.5}}
 
-                <div>
-                  <p>
-                    Meet at:{" "}
-                    {day.toLocaleLowerCase() !== "saturday" &&
-                    day.toLocaleLowerCase() !== "sunday" ? (
-                      <span>
-                        {time} at {location}
-                      </span>
-                    ) : (
-                      ""
-                    )}
-                  </p>
-                  <p>Pace: {pace}</p>
-                </div>
+      >
+        <Banner
+          text={"Group rides"}
+          section="grouprides"
+          sectionLength={4}
+        ></Banner>
+        <motion.div
+          className="flex flex-col gap-2 w-80 md:w-60 pt-3 pb-3"
+          variants={animationVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.p variants={animationVariants}>
+            Stay tuned for our 2023 ride schedule!
+          </motion.p>
+          <motion.p
+            className="italic text-justify"
+            variants={animationVariants}
+          >
+            <span className="font-bold not-italic">Note:</span> Cycling involves
+            many inherent risks. Although we care for each other, it is each
+            rider's responsibility to follow the rules of the road, ride
+            defensively, avoid hazards and cycle safely. By joining Saddle
+            Sisters of High Park ("SSHP") group rides, you acknowledge that you
+            do so at your own risk. Neither SSHP nor its ride leaders/ride
+            organizers assume responsibility to safeguard SSHP ride participants
+            from the risks of cycling (including but not limited to personal
+            injury, death and/or property damage) nor does SSHP nor its ride
+            leaders/ride organizers assume any duty of care for ride
+            participants.
+          </motion.p>
+          <motion.h3 className="text-xl font-bold">
+            2022 weekly ride schedule
+          </motion.h3>
+          {rideList.map((dayInfo) => {
+            const { day, rides } = dayInfo;
+            const rideList = rides.map((ride) => {
+              const { rideName, time, location, pace } = ride;
+              return (
+                <motion.div variants={animationVariants}>
+                  <h4 className="text-base font-semibold text-green">
+                    {rideName}
+                  </h4>
+                  {console.log(day)}
+                  <div>
+                    <p>
+                      Meet at:{" "}
+                      {day.toLocaleLowerCase() !== "saturday" &&
+                      day.toLocaleLowerCase() !== "sunday" ? (
+                        <span>
+                          {time} at {location}
+                        </span>
+                      ) : (
+                        ""
+                      )}
+                    </p>
+                    <p>Pace: {pace}</p>
+                  </div>
+                </motion.div>
+              );
+            });
+            return (
+              <motion.div
+                className="flex flex-col gap-1"
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+              >
+                <h3 className="text-lg font-bold">{day} Rides</h3>
+                {rideList}
               </motion.div>
             );
-          });
-          return (
-            <motion.div
-              className="flex flex-col gap-1"
-              initial={{opacity:0, y:100}}
-              whileInView={{opacity:1, y:0}}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-lg font-bold">{day} Rides</h3>
-              {rideList}
-            </motion.div>
-          );
-        })}
-      </motion.div>
-    </SectionDiv>
+          })}
+        </motion.div>
+      </SectionDiv>
+    </AnimatePresence>
   );
 };
 

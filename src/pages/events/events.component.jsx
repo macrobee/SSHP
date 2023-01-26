@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Banner from "../../components/banner/banner";
 
@@ -30,34 +30,46 @@ const animationVariants = {
 };
 const Events = () => {
   return (
-    <SectionDiv>
-      <Banner text={"Past events"} section="events" sectionLength={5}></Banner>
-      <motion.div
-        className="flex flex-col justify-center items-center gap-2 w-80 md:w-60 pt-3 pb-3"
-        variants={animationVariants}
-        initial="initial"
-        animate="animate"
+    <AnimatePresence>
+      <SectionDiv
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <motion.h2 className="text-xl font-bold" variants={animationVariants}>
-          Some of our past events
-        </motion.h2>
-        {eventsList.map((event) => {
-          const { name, photoUrl } = event;
-          return (
-            <motion.div
-              initial={{opacity:0, y:100}}
-              whileInView={{opacity:1, y:0}}
-              viewport={{ once: true }}
-              className={`flex flex-col gap-1 justify-center items-center`}
-              key={photoUrl}
-            >
-              <h3 className="text-lg font-semibold text-green">{name}</h3>
-              <img src={photoUrl} alt={`SSHP at ${name}`} className="w-80" />
-            </motion.div>
-          );
-        })}
-      </motion.div>
-    </SectionDiv>
+        <Banner
+          text={"Past events"}
+          section="events"
+          sectionLength={5}
+        ></Banner>
+        <motion.div
+          className="flex flex-col justify-center items-center gap-2 w-80 md:w-60 pt-3 pb-3"
+          variants={animationVariants}
+          initial="initial"
+          animate="animate"
+        >
+          <motion.h2 className="text-xl font-bold" variants={animationVariants}>
+            Some of our past events
+          </motion.h2>
+          {eventsList.map((event) => {
+            const { name, photoUrl } = event;
+            return (
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className={`flex flex-col gap-1 justify-center items-center`}
+                key={photoUrl}
+              >
+                <h3 className="text-lg font-semibold text-green">{name}</h3>
+                <img src={photoUrl} alt={`SSHP at ${name}`} className="w-80" />
+              </motion.div>
+            );
+          })}
+        </motion.div>
+      </SectionDiv>
+    </AnimatePresence>
   );
 };
 

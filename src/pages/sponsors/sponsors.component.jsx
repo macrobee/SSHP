@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 import Banner from "../../components/banner/banner";
 import SponsorBox from "./sponsorbox.component";
@@ -9,80 +9,98 @@ const sponsorList = [
   {
     name: "The Biking Lawyer",
     image:
-      "data:image/png;base64,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",
+      "https://media.licdn.com/dms/image/C560BAQGpM2f4CF-o0Q/company-logo_200_200/0/1617559886305?e=2147483647&v=beta&t=9NK1IY7rpJ-EfnzfMSNYtZzF5qJM4XYwvdgFndut6uQ",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ea distinctio minima veniam omnis expedita magnam iste voluptatum velit atque necessitatibus, rerum a totam magni ab aspernatur error corrupti. Nulla.",
+      "The Biking Lawyer LLP specializes in helping injured cyclists and other vulnerable people. From bike accidents to police violence we provide compassionate and first rate personal injury law services.",
+    siteUrl: "https://www.thebikinglawyer.ca/",
   },
   {
     name: "Bikes on Wheels",
     image:
       "https://cdn.shopify.com/s/files/1/0391/5677/7091/files/BOW_Toronto_600.png?v=1637093303",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ea distinctio minima veniam omnis expedita magnam iste voluptatum velit atque necessitatibus, rerum a totam magni ab aspernatur error corrupti. Nulla.",
+      "Bikes on Wheels is your neighbourhood bike shop located in Kensington Market, supporting Toronto cyclists and cross-town commuters since 1993. Whether your bike gets you around on the city streets, a track, or out on the open road, Bikes on Wheel has your back.",
+    siteUrl: "https://bikesonwheels.com/",
   },
   {
     name: "ROADKIT",
     image:
       "https://cdn.shopify.com/s/files/1/0670/6144/8998/files/510px-width-transparent_160x@2x.png?v=1667167871",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ea distinctio minima veniam omnis expedita magnam iste voluptatum velit atque necessitatibus, rerum a totam magni ab aspernatur error corrupti. Nulla.",
+      "Based in Toronto, ROADKIT is a locally owned business with a commitment to high-quality international cycling gear for riders at all levels. We scoured the globe to find great brands to help you stand out in the peloton. Whether you’re a seasoned cyclist or just starting out on group rides we’ve got you covered. We’ll help you look race ready with high-quality, innovative, and stylish apparel.",
+    siteUrl: "https://www.roadkit.com/",
   },
   {
     name: "Dismount Bike Shop",
     image:
       "https://cdn.shopify.com/s/files/1/0023/1505/9318/files/DismountLogo_cef0113b-e20f-434d-8dd8-a4d27cbc448b.jpg?v=1639607077&width=500",
     description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus ea distinctio minima veniam omnis expedita magnam iste voluptatum velit atque necessitatibus, rerum a totam magni ab aspernatur error corrupti. Nulla.",
+      "Dismount is a full service family bike shop that specializes in City, Adventure, Mountain, and Kids bikes. We operate a coffee bar inside our walls that provides a social hub for the community, and offers you a unique bike buying experience",
+    siteUrl: "https://dismountbikeshop.com/",
+  },
+  {
+    name: "Blacksmith Cycle",
+    image:
+      "https://cdn.shopify.com/s/files/1/0789/1647/files/Blacksmith_Font_Logo_White_on_white.png?v=1642797726",
+    description:
+      "What makes Blacksmith different is what we are not. We are not a normal bike shop. Sorry. Yes, while we do technically sell bikes what we really do is design and execute to a customer's exacting needs. Whether you know what you’re after down to the finest detail or have no clue other than it’ll probably have two wheels, we are here to work with you. Be it a fit consult on an existing bike, mechanical service, complete bike design, or upgrades, if you are a serious cyclist in Toronto or anywhere around the world, we are more than your local shop.",
+    siteUrl: "https://blacksmithcycle.com/",
+  },
+  {
+    name: "Stage 21 Inc.",
+    image:
+      "https://scontent.fyzd1-3.fna.fbcdn.net/v/t39.30808-6/308617627_480423750806090_5210632934220740404_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=I0nrIrO0uIQAX-DhMEd&_nc_ht=scontent.fyzd1-3.fna&oh=00_AfDHbmGfuUMCxyo_P1b6dmkOdClJ0boAgTkVl8_VZHWC4A&oe=63D6EEDE",
+    description:
+      "Stage 21 Inc. is a cycling lifestyle brand that amplifies the social aspects of cycling through a classic European van. The van encompasses a mobile coffee shop, bike repair shop and event space that will advance Toronto cycling culture and enhance the active outdoors experience of all Torontonians. The van will serve to expand and develop the growing Toronto cycling culture.",
+    siteUrl: "https://stage-21-inc.myshopify.com/",
   },
 ];
-const animationVariants = {
-  initial: { y: "50px", x: 0, opacity: 0 },
-  animate: {
-    opacity: 1,
-    y: "0px",
-    x: 0,
-    transition: { staggerChildren: 0.2, ease: "easeInOut", duration: 1 },
-  },
-};
+
 const Sponsors = () => {
   return (
-    <SectionDiv>
-      <Banner
-        text={"Our generous sponsors"}
-        section="sponsors"
-        sectionLength={1}
-      />
-      <div
-        className="flex flex-col gap-3 md:gap-2 w-80 md:w-60 pt-3 pb-3"
-      
+    <AnimatePresence>
+      <SectionDiv
+        as={motion.div}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        transition={{duration:0.5}}
       >
-        <motion.p
-          initial={{ opacity: 0, y: 100 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
-          sapiente iste, deleniti corporis molestiae aspernatur non fuga vel ea
-          voluptatibus soluta temporibus pariatur ducimus excepturi veritatis
-          tempora autem exercitationem a!
-        </motion.p>
-
-        {sponsorList.map((sponsor) => {
-          const { name, image, description } = sponsor;
-          return (
-            <SponsorBox            
-              reverse={
-                sponsorList.indexOf(sponsor) % 2 === 0 ? "flex-row-reverse" : ""
-              }
-              name={name}
-              image={image}
-              description={description}
-              key={name}
-            />
-          );
-        })}
-      </div>
-    </SectionDiv>
+        <Banner
+          text={"Our generous sponsors"}
+          section="sponsors"
+          sectionLength={1}
+        />
+        <div className="flex flex-col gap-3 md:gap-2 w-80 md:w-60 pt-3 pb-3">
+          <motion.p
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            Many of our events are made possible thanks to our sponsors. These
+            events include informational workshops, tours, discounts on
+            equipment, and/or sponsorship for our race team. Check out their sites below!
+          </motion.p>
+          {sponsorList.map((sponsor) => {
+            const { name, image, description, siteUrl } = sponsor;
+            return (
+              <SponsorBox
+                reverse={
+                  sponsorList.indexOf(sponsor) % 2 === 0
+                    ? "md:flex-row-reverse"
+                    : "md:flex-row"
+                }
+                name={name}
+                image={image}
+                description={description}
+                siteUrl={siteUrl}
+                key={name}
+              />
+            );
+          })}
+        </div>
+      </SectionDiv>
+    </AnimatePresence>
   );
 };
 
