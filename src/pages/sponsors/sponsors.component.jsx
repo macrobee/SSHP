@@ -52,13 +52,15 @@ const Sponsors = () => {
         section="sponsors"
         sectionLength={1}
       />
-      <motion.div
-        className="flex flex-col gap-2 w-80 md:w-60 pt-3 pb-3"
-        variants={animationVariants}
-        initial="initial"
-        animate="animate"
+      <div
+        className="flex flex-col gap-3 md:gap-2 w-80 md:w-60 pt-3 pb-3"
+      
       >
-        <motion.p variants={animationVariants}>
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore
           sapiente iste, deleniti corporis molestiae aspernatur non fuga vel ea
           voluptatibus soluta temporibus pariatur ducimus excepturi veritatis
@@ -68,9 +70,7 @@ const Sponsors = () => {
         {sponsorList.map((sponsor) => {
           const { name, image, description } = sponsor;
           return (
-            <SponsorBox
-              as={motion.div}
-              variants={animationVariants}
+            <SponsorBox            
               reverse={
                 sponsorList.indexOf(sponsor) % 2 === 0 ? "flex-row-reverse" : ""
               }
@@ -81,7 +81,7 @@ const Sponsors = () => {
             />
           );
         })}
-      </motion.div>
+      </div>
     </SectionDiv>
   );
 };

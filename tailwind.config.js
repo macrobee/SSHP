@@ -21,6 +21,7 @@ module.exports = {
       30: "30px",
       80: "80%",
       60: "60%",
+      'full': "100%",
     },
     spacing: {
       0: "0",
@@ -37,6 +38,7 @@ module.exports = {
       green: "#365314",
       pink: "#fda4af",
       off: "#fffbeb",
+      background:"#fffbeb",
     },
   },
   content: ["./src/**/*.{js,jsx,ts,tsx}"],

@@ -174,7 +174,9 @@ const Rides = () => {
           return (
             <motion.div
               className="flex flex-col gap-1"
-              variants={animationVariants}
+              initial={{opacity:0, y:100}}
+              whileInView={{opacity:1, y:0}}
+              viewport={{ once: true }}
             >
               <h3 className="text-lg font-bold">{day} Rides</h3>
               {rideList}

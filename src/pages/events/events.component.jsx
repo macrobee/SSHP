@@ -45,7 +45,9 @@ const Events = () => {
           const { name, photoUrl } = event;
           return (
             <motion.div
-              variants={animationVariants}
+              initial={{opacity:0, y:100}}
+              whileInView={{opacity:1, y:0}}
+              viewport={{ once: true }}
               className={`flex flex-col gap-1 justify-center items-center`}
               key={photoUrl}
             >

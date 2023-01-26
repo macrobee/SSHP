@@ -16,6 +16,11 @@ export const HeroSection = styled.div`
   }
   @media (max-width: 800px) {
     width: 100%;
+    height: 300px;
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    height: 200px;
   }
   div{
     z-index: 0;
@@ -32,4 +37,5 @@ export const SlideshowImage = styled.img`
   filter: brightness(50%);
   width: 100%;
   object-fit: fill;
+
 `;
