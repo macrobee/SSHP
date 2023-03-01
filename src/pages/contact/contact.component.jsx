@@ -4,6 +4,7 @@ import { ReactComponent as StravaIcon } from "../../assets/strava.svg";
 // import { ReactComponent as DiscordIcon } from "../../assets/discord.svg";
 import { ReactComponent as InstaIcon } from "../../assets/instagram.svg";
 import { ReactComponent as MailIcon } from "../../assets/email.svg";
+import { ReactComponent as LinktreeIcon } from "../../assets/linktree.svg";
 
 import Banner from "../../components/banner/banner";
 
@@ -30,14 +31,14 @@ const Contact = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{duration:0.5}}
-
+        transition={{ duration: 0.5 }}
       >
         <Banner
           text={"Get in touch!"}
           section="contact"
-          sectionLength={2}
+          sectionLength={4}
         ></Banner>
+
         <motion.div
           className="flex flex-col gap-2 w-80 md:w-60 pt-3 pb-3"
           variants={animationVariants}
@@ -67,7 +68,7 @@ const Contact = () => {
           <motion.div className="social-links" variants={animationVariants}>
             <a
               href="https://www.strava.com/clubs/738936"
-              className="hover:scale-110 duration-200"
+              className="hover:scale-110 duration-200 shadow-md"
             >
               <StravaIcon width={iconSize} height={iconSize} />
             </a>
@@ -76,15 +77,21 @@ const Contact = () => {
             </a> */}
             <a
               href="mailto:info@saddlesisters.ca"
-              className="hover:scale-110 duration-200"
+              className="hover:scale-110 duration-200 shadow-md"
             >
               <MailIcon width={iconSize} height={iconSize} />
             </a>
             <a
               href="https://www.instagram.com/saddlesisterscycling/?hl=en"
-              className="hover:scale-110 duration-200"
+              className="hover:scale-110 duration-200 shadow-md"
             >
               <InstaIcon width={iconSize} height={iconSize} />
+            </a>
+            <a
+              href="https://linktr.ee/saddlesisters"
+              className="hover:scale-110 duration-200 shadow-md rounded-md bg-black"
+            >
+              <LinktreeIcon width={iconSize} height={iconSize} />
             </a>
           </motion.div>
         </motion.div>

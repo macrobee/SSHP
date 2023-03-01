@@ -7,7 +7,6 @@ import { SectionDiv } from "../section.styles";
 const eventsList = [
   { name: "SSHP End of Year Party", photoUrl: "/sshp/events2.jpg" },
   { name: "Bridge Bike Factory Tour", photoUrl: "/sshp/events3.jpg" },
-  { name: "Rapha Women's 100", photoUrl: "/sshp/eventpic-womens-100.jpg" },
   { name: "Midweek Crit races", photoUrl: "/sshp/eventpic-midweek.jpg" },
   {
     name: "Safe Streets in High Park Protest",
@@ -41,7 +40,7 @@ const Events = () => {
         <Banner
           text={"Past events"}
           section="events"
-          sectionLength={5}
+          sectionLength={4}
         ></Banner>
         <motion.div
           className="flex flex-col justify-center items-center gap-2 w-80 md:w-60 pt-3 pb-3"

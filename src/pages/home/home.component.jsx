@@ -15,7 +15,7 @@ const Home = () => {
         transition={{duration:0.5}}
 
       >
-        <Banner text={bannerText} section={`home`} sectionLength={5} />
+        <Banner text={bannerText} section={`home`} sectionLength={4} />
       </SectionDiv>
     </AnimatePresence>
   );

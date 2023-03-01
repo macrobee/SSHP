@@ -24,7 +24,7 @@ const About = () => {
         transition={{duration:0.5}}
 
       >
-        <Banner text={"Who we are"} section="about" sectionLength={1} />
+        <Banner text={"Who we are"} section="about" sectionLength={4} />
         <motion.div
           className="flex flex-col items-center gap-2 w-80 md:w-60 pt-3 pb-3"
           as={motion.div}
