@@ -32,6 +32,7 @@ module.exports = {
       3: "3rem",
       "1/5": "20%",
       "1/10": "10%",
+      "4/5" : "80%",
     },
     colors: {
       transparent: "transparent",

@@ -1,8 +1,18 @@
 import { AnimatePresence, motion } from "framer-motion";
+import FullBackground from "../../components/fullbg/fullbg.component";
 import { SectionDiv } from "../section.styles";
-import Banner from "../../components/banner/banner";
 
-const bannerText = "Saddle Sisters of High Park";
+const bannerText = "Saddle Sisters";
+const bannerText2 = "of High Park";
+const homeImageUrl = "sshp/homepage.jpg";
+
+const links = [
+  { text: "About us", link: "/about" },
+  { text: "Past events", link: "/events" },
+  { text: "Group rides", link: "/rides" },
+  { text: "Sponsors", link: "/sponsors" },
+  { text: "Contact", link: "/contact" },
+];
 
 const Home = () => {
   return (
@@ -11,11 +21,15 @@ const Home = () => {
         as={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        exit={{opacity:0}}
-        transition={{duration:0.5}}
-
+        exit={{ opacity: 0 }}
+        transition={{ duration: 0.5 }}
       >
-        <Banner text={bannerText} section={`home`} sectionLength={4} />
+        <FullBackground
+          headerText1={bannerText}
+          headerText2={bannerText2}
+          links={links}
+          backgroundLink={homeImageUrl}
+        />
       </SectionDiv>
     </AnimatePresence>
   );
