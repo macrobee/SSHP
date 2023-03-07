@@ -3,7 +3,26 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SectionDiv } from "../section.styles";
 
 import Banner from "../../components/banner/banner";
+import PolicyBox from "../../components/policybox/policybox.component";
 
+const policies = [
+  {
+    title: "Code of Conduct",
+    link: "https://docs.google.com/document/d/13ZhptHA_-3BGSbl7LdFTm9cMtdQ8z1a7/edit",
+  },
+  {
+    title: "Privacy Policy",
+    link: "https://docs.google.com/document/d/15DioOex540Mc6Wj6Lq3dkYae4UI2ss-zC5AimEELWHA/edit",
+  },
+  {
+    title: "Discipline and Complaints Policy",
+    link: "https://docs.google.com/document/d/1hVjzcOmSFQKqUkY3uNfoCu_XjbxCUwbKF2InoEHx8Xc/edit",
+  },
+  {
+    title: "Concussion Policy",
+    link: "https://docs.google.com/document/d/1h3EUvnCBvH_R8b_HcDZJPqEF501d0eJW/edit",
+  },
+];
 const pVariants = {
   initial: { y: "50px", x: 0, opacity: 0 },
   animate: {
@@ -13,6 +32,7 @@ const pVariants = {
     transition: { staggerChildren: 0.2, ease: "easeInOut", duration: 1 },
   },
 };
+
 const About = () => {
   return (
     <AnimatePresence>
@@ -21,8 +41,7 @@ const About = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
-        transition={{duration:0.5}}
-
+        transition={{ duration: 0.5 }}
       >
         <Banner text={"Who we are"} section="about" sectionLength={4} />
         <motion.div
@@ -32,6 +51,9 @@ const About = () => {
           initial="initial"
           animate="animate"
         >
+          <motion.p className="font-xl font-bold" variants={pVariants}>
+            We are a network of women who plan organized rides in the mornings.
+          </motion.p>
           <motion.p className="font-semibold text-green" variants={pVariants}>
             SSHP aims to be an inclusive space for Women, Trans, Femme, and
             Non-Binary cyclists.
@@ -57,6 +79,13 @@ const About = () => {
             <span className="text-green font-bold"> info@saddlesisters.ca</span>
             .
           </motion.p>
+
+          <motion.h2 variants={pVariants} className="text-xl font-semibold text-green">
+            Saddle Sisters Policies
+          </motion.h2>
+          <motion.div variants={pVariants} className="w-full flex flex-col gap-1">
+            {policies.map((policy) => <PolicyBox policy={policy} />)}
+          </motion.div>
         </motion.div>
       </SectionDiv>
     </AnimatePresence>

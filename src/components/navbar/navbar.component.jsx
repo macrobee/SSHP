@@ -6,11 +6,7 @@ import { ThemeContext } from "../../contexts/themecontext";
 import { ReactComponent as HamburgerIcon } from "../../assets/hamburgermenu.svg";
 import { ReactComponent as CloseIcon } from "../../assets/close.svg";
 
-import { NavBarDiv } from "./navbar.styles";
-import ThemeButton from "../themebutton/themebutton.component";
-
 const Navbar = ({ navItems }) => {
-  const { currentThemeColors } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const ref = useRef(null);
 

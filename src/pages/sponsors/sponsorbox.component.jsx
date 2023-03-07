@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-const SponsorBox = ({ name, image, description, reverse, siteUrl }) => {
+const SponsorBox = ({ image, description, reverse, siteUrl }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -13,7 +13,7 @@ const SponsorBox = ({ name, image, description, reverse, siteUrl }) => {
         <img src={image} alt="sponsor logo"/>
       </a>
       <p className="text-base text-justify">
-        {name} {description}
+        {description}
       </p>
     </motion.div>
   );

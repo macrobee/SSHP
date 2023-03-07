@@ -17,7 +17,26 @@ type FullBackgroundProps = {
   links: NavLinks[];
   backgroundLink: string;
 };
-
+const linkDivAnimation = {
+  animate: {
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.3,
+    },
+  },
+};
+const linkAnimation = {
+  initial: {
+    y: 200,
+  },
+  animate: {
+    y: 0,
+    transition: {
+      ease: [0.6, 0.01, -0.05, 0.95],
+      duration: 1,
+    },
+  },
+};
 const FullBackground = ({
   headerText1,
   headerText2,
@@ -33,15 +52,27 @@ const FullBackground = ({
     >
       <div className="h-[15vh] md:h-[10vh] bg-transparent"></div>
 
-      <motion.div className="header-text flex flex-col justify-center items-center md:flex-row gap-1 relative z-10">
+      <motion.div className="header-text flex flex-col justify-center items-center md:flex-row gap-1/2 relative z-10">
         <AnimatedHeader text={headerText1} />
         <AnimatedHeader text={headerText2} />
       </motion.div>
 
-      <div className="flex flex-wrap gap-1 md:gap-2 flex-col md:flex-row px-3 justify-center items-center">
+      <motion.div
+        variants={linkDivAnimation}
+        initial="initial"
+        animate="animate"
+        className="flex flex-wrap gap-1 md:gap-2 flex-col md:flex-row px-3 justify-center items-center"
+      >
         {links.length &&
-          links.map(({ text, link }) => <NavLink text={text} link={link} />)}
-      </div>
+          links.map(({ text, link }) => (
+            <motion.span
+              variants={linkAnimation}
+              className="flex justify-center items-center"
+            >
+              <NavLink text={text} link={link} />
+            </motion.span>
+          ))}
+      </motion.div>
     </BackgroundImage>
   );
 };
