@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+# Saddle Sisters of High Park
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the landing page for the Saddle Sisters of High Park cycling network. 
 
-## Available Scripts
+## Purpose of the project
 
-In the project directory, you can run:
+The Saddle Sisters of High Park (SSHP) is a network of women who plan organized rides around Toronto. I joined the group in 2021 and have since become an avid cyclist. SSHP aims to connect more women to the sport and expand the cycling community in the GTA, so we needed a site where women can learn more about us and connect. I volunteered to create the site so I could put my React skills to good use.
 
-### `npm start`
+## Technology
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The site was created in React, styled with TailwindCSS, and component transitions were made with Framer Motion. React Router was used to route to different pages of the site. The project is in the process of being migrated to TypeScript as I learn the language. The site is fully responsive for different screen sizes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+Currently, the site contains 5 pages:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### About section
+General information about SSHP, as well as links to our policies.
 
-### `npm run build`
+### Community
+Links to recent SSHP events, news, and affiliates.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Group rides
+List of weekly group rides run by SSHP
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Sponsors
+Information and links to our sponsor websites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Contact
+Social media links for SSHP
