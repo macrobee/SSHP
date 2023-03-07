@@ -14,6 +14,8 @@ const EventBox = ({ event }) => {
       <h3 className="text-lg font-semibold text-green">{name}</h3>
       <a
         href={link}
+        target="_blank"
+        rel="noopener noreferrer"
         className="flex justify-center items-center hover:scale-105 duration-200 ease-in-out w-[200px]"
       >
         <img src={photoUrl} alt={`SSHP at ${name}`} className="w-80" />

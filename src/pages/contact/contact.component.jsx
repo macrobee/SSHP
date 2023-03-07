@@ -68,6 +68,8 @@ const Contact = () => {
           <motion.div className="social-links" variants={animationVariants}>
             <a
               href="https://www.strava.com/clubs/738936"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-110 duration-200 shadow-md"
             >
               <StravaIcon width={iconSize} height={iconSize} />
@@ -77,18 +79,24 @@ const Contact = () => {
             </a> */}
             <a
               href="mailto:info@saddlesisters.ca"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-110 duration-200 shadow-md"
             >
               <MailIcon width={iconSize} height={iconSize} />
             </a>
             <a
               href="https://www.instagram.com/saddlesisterscycling/?hl=en"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-110 duration-200 shadow-md"
             >
               <InstaIcon width={iconSize} height={iconSize} />
             </a>
             <a
               href="https://linktr.ee/saddlesisters"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-110 duration-200 shadow-md rounded-md bg-black"
             >
               <LinktreeIcon width={iconSize} height={iconSize} />
