@@ -72,7 +72,7 @@ const Community = () => {
 
           <div className="flex flex-wrap justify-center items-baseline gap-2">
             {eventsList.map((event) => {
-              return <EventBox event={event} />;
+              return <EventBox event={event} key={`${event.name+"box"}`}/>;
             })}
           </div>
 

@@ -8,7 +8,7 @@ const homeImageUrl = "sshp/homepage.jpg";
 
 const links = [
   { text: "About us", link: "/about" },
-  { text: "Past events", link: "/events" },
+  { text: "Community", link: "/community" },
   { text: "Group rides", link: "/rides" },
   { text: "Sponsors", link: "/sponsors" },
   { text: "Contact", link: "/contact" },

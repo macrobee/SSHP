@@ -37,6 +37,7 @@ const linkAnimation = {
     },
   },
 };
+
 const FullBackground = ({
   headerText1,
   headerText2,
@@ -61,7 +62,7 @@ const FullBackground = ({
         variants={linkDivAnimation}
         initial="initial"
         animate="animate"
-        className="flex flex-wrap gap-1 md:gap-2 flex-col md:flex-row px-3 justify-center items-center"
+        className="flex flex-wrap gap-1 md:gap-2 flex-col md:flex-row px-3 justify-center items-center overflow-hidden"
       >
         {links.length &&
           links.map(({ text, link }) => (

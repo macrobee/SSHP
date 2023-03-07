@@ -45,17 +45,20 @@ const About = () => {
       >
         <Banner text={"Who we are"} section="about" sectionLength={4} />
         <motion.div
-          className="flex flex-col items-center gap-2 w-80 md:w-60 pt-3 pb-3"
+          className="flex flex-col justify-center items-start md:items-center gap-1/2 w-80 md:w-60 pt-3 pb-3"
           as={motion.div}
           variants={pVariants}
           initial="initial"
           animate="animate"
         >
-          <motion.p className="font-xl font-bold" variants={pVariants}>
+          <motion.p
+            className="font-xl font-bold text-green"
+            variants={pVariants}
+          >
             We are a network of women who plan organized rides in the mornings.
           </motion.p>
-          <motion.p className="font-semibold text-green" variants={pVariants}>
-            SSHP aims to be an inclusive space for Women, Trans, Femme, and
+          <motion.p className="" variants={pVariants}>
+            We aim to be an inclusive space for Women, Trans, Femme, and
             Non-Binary cyclists.
           </motion.p>
           <motion.p variants={pVariants}>
@@ -70,21 +73,38 @@ const About = () => {
           </motion.p>
           <motion.p variants={pVariants}>Helmets 100% mandatory.</motion.p>
           <motion.p variants={pVariants}>
-            Send us a DM on our Instagram (@saddlesisterscycling) to ask about
-            how to join our DISCORD chat group (or email info@saddlesisters.ca)
-            Our rides are not OCA sanctioned.
+            Send us a DM on our Instagram{" "}
+            <a
+              href={"https://www.instagram.com/saddlesisterscycling/?hl=en"}
+              className="text-green"
+            >
+              (@saddlesisterscycling)
+            </a>{" "}
+            to ask about how to join our DISCORD chat group (or email{" "}
+            <a href="mailto:info@saddlesisters.ca" className="text-green">
+              info@saddlesisters.ca
+            </a>
+            ) Our rides are not OCA sanctioned.
           </motion.p>
           <motion.p variants={pVariants}>
             If you are interested in joining our race team, please email
-            <span className="text-green font-bold"> info@saddlesisters.ca</span>
+            <a href="mailto:info@saddlesisters.ca" className="text-green font-bold"> info@saddlesisters.ca</a>
             .
           </motion.p>
 
-          <motion.h2 variants={pVariants} className="text-xl font-semibold text-green">
+          <motion.h2
+            variants={pVariants}
+            className="text-xl font-semibold text-green pt-2"
+          >
             Saddle Sisters Policies
           </motion.h2>
-          <motion.div variants={pVariants} className="w-full flex flex-col gap-1">
-            {policies.map((policy) => <PolicyBox policy={policy} />)}
+          <motion.div
+            variants={pVariants}
+            className="w-full flex flex-col gap-1"
+          >
+            {policies.map((policy) => (
+              <PolicyBox policy={policy} />
+            ))}
           </motion.div>
         </motion.div>
       </SectionDiv>
