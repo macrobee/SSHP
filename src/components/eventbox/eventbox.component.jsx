@@ -16,7 +16,7 @@ const EventBox = ({ event }) => {
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex justify-center items-center hover:scale-105 duration-200 ease-in-out w-[200px]"
+        className="flex justify-center items-center hover:scale-105 duration-200 ease-in-out w-[200px] bg-background"
       >
         <img src={photoUrl} alt={`SSHP at ${name}`} className="w-80" />
       </a>
