@@ -5,8 +5,8 @@ import { ReactComponent as ExpandIcon } from "../../assets/expand.svg";
 import { ReactComponent as CollapseIcon } from "../../assets/collapse.svg";
 
 const variants = {
-  open: { opacity: 1, height: "auto", y:0 },
-  collapsed: { opacity: 0, height: 0, y:-50 },
+  open: { opacity: 1, height: "auto", y: 0 },
+  collapsed: { opacity: 0, height: 0, y: -50 },
 };
 
 const PolicyBox = ({ policy }) => {
@@ -34,9 +34,9 @@ const PolicyBox = ({ policy }) => {
           variants={variants}
           initial={isExpanded ? "open" : "collapsed"}
           animate={isExpanded ? "open" : "collapsed"}
-          className={`px-1 py-1/2 hover:text-pink duration-200 z-10 relative`}
+          className={`px-1 py-1/2 z-10 relative`}
         >
-          <a href={link} target="_blank" rel="noopener noreferrer">
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-green hover:text-pink duration-200 ">
             Link to {title}
           </a>
         </motion.div>

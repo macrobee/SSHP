@@ -7,20 +7,20 @@ import PolicyBox from "../../components/policybox/policybox.component";
 
 const policies = [
   {
-    title: "Code of Conduct",
-    link: "https://docs.google.com/document/d/13ZhptHA_-3BGSbl7LdFTm9cMtdQ8z1a7/edit",
+    title: "Waiver and Code of Conduct",
+    link: "./files/SSHPConcussionPolicy.pdf",
   },
   {
     title: "Privacy Policy",
-    link: "https://docs.google.com/document/d/15DioOex540Mc6Wj6Lq3dkYae4UI2ss-zC5AimEELWHA/edit",
+    link: "./files/SSHPDisciplineAndComplaintsPolicy.pdf",
   },
   {
     title: "Discipline and Complaints Policy",
-    link: "https://docs.google.com/document/d/1hVjzcOmSFQKqUkY3uNfoCu_XjbxCUwbKF2InoEHx8Xc/edit",
+    link: "./files/SSHPPrivacyPolicy.pdf",
   },
   {
     title: "Concussion Policy",
-    link: "https://docs.google.com/document/d/1h3EUvnCBvH_R8b_HcDZJPqEF501d0eJW/edit",
+    link: "./files/SSHPRiderWaiverFormAndCofC.pdf",
   },
 ];
 const pVariants = {
@@ -45,7 +45,7 @@ const About = () => {
       >
         <Banner text={"Who we are"} section="about" sectionLength={4} />
         <motion.div
-          className="flex flex-col justify-center items-start md:items-center gap-1/2 w-80 md:w-60 pt-3 pb-3"
+          className="flex flex-col justify-center items-start gap-1/2 w-80 md:w-60 pt-3 pb-3"
           as={motion.div}
           variants={pVariants}
           initial="initial"
@@ -91,7 +91,10 @@ const About = () => {
             <a href="mailto:info@saddlesisters.ca" className="text-green font-bold"> info@saddlesisters.ca</a>
             .
           </motion.p>
-
+          <motion.p variants={pVariants} className="text-text mt-1 italic">
+              Note: Riders must sign a copy of the waiver below before joining SSHP
+              rides
+            </motion.p>
           <motion.h2
             variants={pVariants}
             className="text-xl font-semibold text-green pt-2"
