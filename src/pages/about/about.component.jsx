@@ -91,7 +91,7 @@ const About = () => {
             <a href="mailto:info@saddlesisters.ca" className="text-green font-bold"> info@saddlesisters.ca</a>
             .
           </motion.p>
-          <motion.p variants={pVariants} className="text-text mt-1 italic">
+          <motion.p variants={pVariants} className="mt-1 italic">
               Note: Riders must sign a copy of the waiver below before joining SSHP
               rides
             </motion.p>
