@@ -8,17 +8,19 @@ import { SectionDiv } from "../section.styles";
 const eventsList = [
   {
     name: "Ontario Cycling",
+    description: "SSHP started from a small group of women who just wanted to ride during the pandemic. Since then, it has grown into a vibrant community of over 300 women. Read the story about how SSHP came to be:",
     photoUrl: "/links/ontariocycling.png",
     link: "https://ontariocycling.org/sshd23/",
   },
   {
-    name: "Bike Brigade",
+    name: "Bike Brigade", description: "The Bike Brigade is a group of volunteer cyclists delivering food and other essentials by bike across the city. Learn about how to help underinvested communities in our city with the Bike Brigade:",
     photoUrl: "/links/bikebrigade.png",
     link: "https://www.bikebrigade.ca/",
   },
 
   {
     name: "Ride for Brain Health",
+    description: "On June 4, 2023, SSHP will be riding at the Baycrest Bike for Brain Health to support brain research. Join our team here: ",
     photoUrl: "/links/baycrest.png",
     link: "https://baycrestbikeforbrainhealth.crowdchange.ca/16201/team/14825",
   },
@@ -26,19 +28,17 @@ const eventsList = [
 const affiliateLinks = [
   {
     name: "Midweek Cycling Club",
+    description: "Midweek Cycling Club (MWCC) is an athletes-for-life bike racing program in Toronto and Missisauga. SSHP members have learned essential race skills through MWCC's Learn to Race workshops and Midweek Crit races. Learn more about them here: ",
     photoUrl: "/links/midweek.png",
     link: "https://midweekclub.ca/",
   },
   {
     name: "Gyaldem Cycling Collective",
+description: "Gyaldem Cycling Collective (GDCC) is a volunteer-run community cycling group for women. Find out about their events here: ",
     photoUrl: "/links/gyaldem.jpg",
     link: "https://www.instagram.com/gyaldemcyclingcollective/?hl=en",
   },
-  {
-    name: "Xert",
-    photoUrl: "/links/xert.jpg",
-    link: "https://www.xertonline.com/",
-  },
+  
 ];
 const animationVariants = {
   initial: { y: "50px", x: 0, opacity: 0 },
