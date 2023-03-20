@@ -7,8 +7,14 @@ This is the landing page for the Saddle Sisters of High Park cycling network.
 The Saddle Sisters of High Park (SSHP) is a network of women who plan organized rides around Toronto. I joined the group in 2021 and have since become an avid cyclist. SSHP aims to connect more women to the sport and expand the cycling community in the GTA, so we needed a site where women can learn more about us and connect. I volunteered to create the site so I could put my React skills to good use.
 
 ## Technology
+- Languages: HTML, CSS, JavaScript/TypeScript
+- JS framework: React
+- Styling: TailwindCSS
+- Transitions: Framer Motion
+- Page routing: React Router
 
-The site was created in React, styled with TailwindCSS, and component transitions were made with Framer Motion. React Router was used to route to different pages of the site. The project is in the process of being migrated to TypeScript as I learn the language. The site is fully responsive for different screen sizes.
+Note 1: The project is in the process of being migrated to TypeScript as I learn the language. 
+Note 2: The site is fully responsive for different screen sizes.
 
 ## Features
 
