@@ -21,7 +21,7 @@ const animationVariants = {
     transition: { staggerChildren: 0.2, ease: "easeInOut", duration: 1 },
   },
 };
-const iconSize = 35;
+const iconSize = 50;
 
 const Contact = () => {
   return (
@@ -54,10 +54,10 @@ const Contact = () => {
           <motion.p className="text-justify" variants={animationVariants}>
             Check out our Instagram page to see what we've been up to! If you're
             looking to join a ride, join our Strava group to see our upcoming
-            events. For general inquiries, send us an email at{" "}
-            <span className="text-green">info@saddlesisters.ca</span>. We also
-            have an active Discord community where you can ask questions, share
-            ideas, and find riding partners!
+            events. We also have an active Discord community where you can ask
+            questions, share ideas, and find riding partners! For general
+            inquiries, send us an email at{" "}
+            <span className="text-green">info@saddlesisters.ca</span>.
           </motion.p>
           <motion.h3
             className="text-lg font-bold text-green"
@@ -70,7 +70,7 @@ const Contact = () => {
               href="https://www.strava.com/clubs/738936"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 duration-200 shadow-md"
+              className="hover:scale-110 duration-200 shadow-md rounded-md"
             >
               <StravaIcon width={iconSize} height={iconSize} />
             </a>
@@ -81,7 +81,7 @@ const Contact = () => {
               href="mailto:info@saddlesisters.ca"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 duration-200 shadow-md"
+              className="hover:scale-110 duration-200 shadow-md rounded-md"
             >
               <MailIcon width={iconSize} height={iconSize} />
             </a>
@@ -89,7 +89,7 @@ const Contact = () => {
               href="https://www.instagram.com/saddlesisterscycling/?hl=en"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 duration-200 shadow-md"
+              className="hover:scale-110 duration-200 shadow-md rounded-md"
             >
               <InstaIcon width={iconSize} height={iconSize} />
             </a>
@@ -97,7 +97,7 @@ const Contact = () => {
               href="https://linktr.ee/saddlesisters"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:scale-110 duration-200 shadow-md rounded-md bg-black"
+              className="hover:scale-110 duration-200 shadow-md rounded-md"
             >
               <LinktreeIcon width={iconSize} height={iconSize} />
             </a>
