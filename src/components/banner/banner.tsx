@@ -26,7 +26,7 @@ const Banner = ({ text, section, sectionLength }: IBannerProps) => {
   return (
     <HeroSection>
       <motion.h1
-        className="text-3xl font-bold"
+        className="text-3xl font-bold text-background"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
       >

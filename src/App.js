@@ -10,7 +10,7 @@ import Sponsors from "./pages/sponsors/sponsors.component";
 import Contact from "./pages/contact/contact.component";
 
 const navItems = [
-  { text: "Who we are", path: "about" },
+  { text: "About us", path: "about" },
   { text: "Community", path: "community" },
   { text: "Group rides", path: "rides" },
   { text: "Sponsors", path: "sponsors" },

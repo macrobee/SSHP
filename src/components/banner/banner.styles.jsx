@@ -12,7 +12,6 @@ export const HeroSection = styled.div`
   h1 {
     z-index: 2;
     position: absolute;
-    color: white;
   }
   @media (max-width: 800px) {
     width: 100%;

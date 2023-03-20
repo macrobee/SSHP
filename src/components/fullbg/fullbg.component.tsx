@@ -69,6 +69,7 @@ const FullBackground = ({
             <motion.span
               variants={linkAnimation}
               className="flex justify-center items-center"
+              key={link+text}
             >
               <NavLink text={text} link={link} />
             </motion.span>
