@@ -8,19 +8,19 @@ import PolicyBox from "../../components/policybox/policybox.component";
 const policies = [
   {
     title: "Waiver and Code of Conduct",
-    link: "./files/SSHPConcussionPolicy.pdf",
+    link: "./files/SSHPRiderWaiverFormAndCofC.pdf",
   },
   {
     title: "Privacy Policy",
-    link: "./files/SSHPDisciplineAndComplaintsPolicy.pdf",
-  },
-  {
-    title: "Discipline and Complaints Policy",
     link: "./files/SSHPPrivacyPolicy.pdf",
   },
   {
+    title: "Discipline and Complaints Policy",
+    link: "./files/SSHPDisciplineAndComplaintsPolicy.pdf",
+  },
+  {
     title: "Concussion Policy",
-    link: "./files/SSHPRiderWaiverFormAndCofC.pdf",
+    link: "./files/SSHPConcussionPolicy.pdf",
   },
 ];
 const pVariants = {
@@ -92,7 +92,7 @@ const About = () => {
             .
           </motion.p>
           <motion.p variants={pVariants} className="mt-1 italic">
-              Note: Riders must sign a copy of the waiver below before joining SSHP
+              <span className="font-bold text-green">Note: </span>Effective May 1st, 2023, all cyclists who join SSHP official rides are expected to sign a copy of the Waiver and Code of Conduct
               rides
             </motion.p>
           <motion.h2

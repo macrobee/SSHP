@@ -9,7 +9,6 @@ import { ReactComponent as LinktreeIcon } from "../../assets/linktree.svg";
 import Banner from "../../components/banner/banner";
 
 import { SectionDiv } from "../section.styles";
-import { ContentDiv } from "../content.styles";
 import "./contact.scss";
 
 const animationVariants = {

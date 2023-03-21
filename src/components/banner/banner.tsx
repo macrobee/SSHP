@@ -4,13 +4,7 @@ import Slideshow from "./slideshow.component";
 
 import { HeroSection } from "./banner.styles";
 
-//typing objects
-//type (allows union, more for functional programming)
-type BannerProps = {
-  text: string;
-  section: string;
-  sectionLength: number;
-};
+
 
 //interface (extendable, more for OOP)
 interface IBannerProps {
