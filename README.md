@@ -2,6 +2,8 @@
 
 This is the landing page for the Saddle Sisters of High Park cycling network. 
 
+Live demo can be viewed here: [https://saddlesisters.netlify.app/](https://saddlesisters.netlify.app/)
+
 ## Purpose of the project
 
 The Saddle Sisters of High Park (SSHP) is a network of women who plan organized rides around Toronto. I joined the group in 2021 and have since become an avid cyclist. SSHP aims to connect more women to the sport and expand the cycling community in the GTA, so we needed a site where women can learn more about us and connect. I volunteered to create the site so I could put my React skills to good use.
