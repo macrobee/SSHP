@@ -38,6 +38,10 @@ description: "Gyaldem Cycling Collective (GDCC) is a volunteer-run community cyc
     photoUrl: "/links/gyaldem.jpg",
     link: "https://www.instagram.com/gyaldemcyclingcollective/?hl=en",
   },
+  {name: "Morning Glory Cycling Club",
+description: "The Morning Glory Cycling Club is a group of riders that enjoy watching the sunrise from their saddles! #Getupandgo",
+photoUrl: "/links/MGCC.png",
+link: "http://www.mgridetoronto.com/"}
   
 ];
 const animationVariants = {
@@ -77,7 +81,7 @@ const Community = () => {
           </div>
 
           <motion.h2 className="text-xl font-bold" variants={animationVariants}>
-            Saddle Sister affiliate links{" "}
+            Saddle Sisters Cycling Friends{" "}
           </motion.h2>
 
           <div className="flex flex-wrap justify-center items-baseline gap-2">

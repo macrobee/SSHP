@@ -11,7 +11,7 @@ const EventBox = ({ event }) => {
       className={`flex flex-col md:flex-row justify-center items-center md:justify-between md:items-center w-full`}
       key={photoUrl}
     >
-      <div className="flex flex-col justify-evenly items-center w-full md:w-[70%]">
+      <div className="flex flex-col justify-evenly items-center md:items-start w-full md:w-[70%]">
         <h3 className="text-lg font-semibold text-green">{name}</h3>
         <p className="w-80 text-justify">{description}</p>
       </div>

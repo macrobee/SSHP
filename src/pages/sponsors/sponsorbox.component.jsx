@@ -9,12 +9,15 @@ const SponsorBox = ({ image, description, reverse, siteUrl }) => {
       transition={{ duration: 0.5 }}
       className={`flex flex-col ${reverse} justify-between items-center gap-2`}
     >
-      <a href={siteUrl} className="w-60 md:w-full hover:scale-110 duration-300 ease-in-out">
-        <img src={image} alt="sponsor logo"/>
+      <a
+        href={siteUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-60 md:w-full hover:scale-110 duration-300 ease-in-out"
+      >
+        <img src={image} alt="sponsor logo" />
       </a>
-      <p className="text-base text-justify">
-        {description}
-      </p>
+      <p className="text-base text-justify">{description}</p>
     </motion.div>
   );
 };

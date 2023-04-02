@@ -133,13 +133,7 @@ const Rides = () => {
           animate="animate"
         >
           <motion.p variants={animationVariants}>
-            We are a non-OCA-sanctioned group. However, we will on occasion host
-            some sanctioned group rides where you must be registered with the
-            OCA to join. To be a part of these rides, you can register through{" "}
-            <a href="https://ccnbikes.com/#!/events/saddle-sisters-of-high-park-2023" target="_blank" rel="noreferrer" className="font-bold text-green hover:underline">
-              this link
-            </a>
-            .
+            Saddle Sister group rides are not sanctioned by the OCA.
           </motion.p>
 
           <motion.p variants={animationVariants}>
