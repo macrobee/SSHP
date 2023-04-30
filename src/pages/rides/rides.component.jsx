@@ -9,16 +9,11 @@ const rideList = [
     day: "Monday",
     rides: [
       {
-        rideName: "Never Miss a Monday",
-        time: "6:30am-7:30am",
-        location: "High Park",
-        pace: "25kph average",
-      },
-      {
-        rideName: "Learn To Race (LTR) with Midweek",
-        time: "6:30pm",
-        location: "Mississauga",
+        rideName: "Where’s the Dirt?",
+        time: "6:00am",
+        location: "Avenue/Bloor",
         pace: "n/a",
+        notes: "Gravel/trail ride/skills practice. 32mm+ tire width recommended."
       },
     ],
   },
@@ -26,22 +21,16 @@ const rideList = [
     day: "Tuesday",
     rides: [
       {
-        rideName: "Pre-Tommy Tuesday",
-        time: "6:00am",
-        location: "Exhibition",
-        pace: "20-25kph average",
-      },
-      {
         rideName: "Tommy Tuesday",
-        time: "6:30-8:00am",
+        time: "6:15am",
         location: "Canary District",
-        pace: "20-25kph average",
+        pace: "20-23kph average",
       },
       {
-        rideName: "Midweek Crit",
-        time: "6:15pm",
-        location: "Mississauga",
-        pace: "race pace",
+        rideName: "Turn Baby Turn",
+        time: "5:45pm",
+        location: "Jet Fuel, 519 Parliament Street",
+        pace: "28kph+ average",
       },
     ],
   },
@@ -49,10 +38,29 @@ const rideList = [
     day: "Wednesday",
     rides: [
       {
-        rideName: "High Park/Ellis Laps",
-        time: "6:00am-7:15am",
+        rideName: "Wake-Up Wednesday",
+        time: "5:45am",
         location: "High Park",
-        pace: "21-25kph average",
+        pace: "25-27kph average",
+      },
+      {
+        rideName: "INTRO 2 SSHP",
+        time: "5:45am",
+        location: "High Park",
+        pace: "n/a",
+        notes: "Beginner rides for new ‘sisters’ with focus on skills, paceline, rotating, turning/cornering, and more. Twice a month (or as needed).",
+      }, {
+        rideName: "HILLS HILLS HILLS on repeat",
+        time: "6:00am until 7:15am",
+        location: "High Park",
+        pace: "25-27kph average",
+        notes: "The odd morning we will put this event together where we do some Ellis laps and High Park laps while we learn to ride and stay together as a group."
+      }, {
+        rideName: "Lift Me Up ...Hills",
+        time: "6:30pm",
+        location: "High Park",
+        pace: "n/a",
+        notes: "West end hills in the PM. The goal will be elevation rather than speed, with an average speed of 25-27 km on flats."
       },
     ],
   },
@@ -60,32 +68,49 @@ const rideList = [
     day: "Thursday",
     rides: [
       {
-        rideName: "Steel Cut Oats (hills)",
+        rideName: "Rotating Oats",
         time: "5:45am",
-        location: "Canary District",
-        pace: "25kph average",
+        location: "East End",
+        pace: "n/a",
+        notes: "Check Strava to see which type of oats we're serving up each week."
       },
+      {
+        rideName: "MGCC + SSHP",
+        time: "5:50am",
+        location: "High Park",
+        pace: "26-28+ kph",
+        notes: "Must be a registered OCA SSHP member or MGCC member to join this ride. No exceptions."
+      }
     ],
   },
   {
     day: "Friday",
     rides: [
       {
-        rideName: "Duck Duck Goose/Bayview Drills",
-        time: "6:30-8:00am",
-        location: "Canary District",
-        pace: "20-24kph average",
+        rideName: "Footloose Friday",
+        time: "6:00am",
+        location: "High Park",
+        pace: "20-23kph average",
+        notes: "Approx 20-30km ride starting from High Park."
       },
+      {
+        rideName: "Far-East Friday",
+        time: "6:00am/pm",
+        location: "East End",
+        pace: "20-22kph average",
+        notes: "Morning or evening ride (alternating weekly) starting near Danforth and Woodbine. Check Strava for details."
+      }
     ],
   },
   {
     day: "Saturday",
     rides: [
       {
-        rideName: "Open to discord for recommendations/ideas",
-        time: "n/a",
+        rideName: "COOL BEANS",
+        time: "Later start",
         location: "n/a",
-        pace: "n/a",
+        pace: "20-23kph average",
+        notes: "Check Strava for details"
       },
     ],
   },
@@ -93,10 +118,11 @@ const rideList = [
     day: "Sunday",
     rides: [
       {
-        rideName: "Coffee Ride/100km route",
-        time: "7:00-11am",
+        rideName: "MGCC Social Sunday",
+        time: "5:50am",
         location: "n/a",
-        pace: "n/a",
+        pace: "25+kph average depending on the group",
+        notes: "First Sunday of each month we may attend the MGCC Sunday Social coed ride. Pace is approx 25+ avg depending on the group. Must be a registered OCA SSHP member or MGCC member to join this ride. No exceptions. ",
       },
     ],
   },
@@ -136,9 +162,7 @@ const Rides = () => {
             Saddle Sister group rides are not sanctioned by the OCA.
           </motion.p>
 
-          <motion.p variants={animationVariants}>
-            Stay tuned for our 2023 ride schedule!
-          </motion.p>
+
           <motion.p
             className="italic text-justify"
             variants={animationVariants}
@@ -156,31 +180,24 @@ const Rides = () => {
             participants.
           </motion.p>
           <motion.h3 className="text-xl font-bold">
-            2022 weekly ride schedule
+            2023 weekly ride schedule
           </motion.h3>
           {rideList.map((dayInfo) => {
             const { day, rides } = dayInfo;
             const rideList = rides.map((ride) => {
-              const { rideName, time, location, pace } = ride;
+              const { rideName, time, location, pace, notes } = ride;
               return (
                 <motion.div variants={animationVariants}>
-                  <h4 className="text-base font-semibold text-green">
+                  <h4 className="text-base font-bold text-green">
                     {rideName}
                   </h4>
-                  {console.log(day)}
                   <div>
-                    <p>
-                      Meet at:{" "}
-                      {day.toLocaleLowerCase() !== "saturday" &&
-                      day.toLocaleLowerCase() !== "sunday" ? (
-                        <span>
-                          {time} at {location}
-                        </span>
-                      ) : (
-                        ""
-                      )}
+                    <p className="text-">
+                      <span className="font-semibold">Meeting time:</span> {time}
                     </p>
-                    <p>Pace: {pace}</p>
+                    <p className="text-"><span className="font-semibold">Location:</span> {location} </p>
+                    <p className="text-"><span className="font-semibold">Pace:</span> {pace}</p>
+                    {notes ? <p className="text-"><span className="font-semibold"> Notes: </span> <span className="italic"> {notes}</span></p> : null}
                   </div>
                 </motion.div>
               );
