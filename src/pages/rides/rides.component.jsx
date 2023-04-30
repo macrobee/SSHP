@@ -29,7 +29,7 @@ const rideList = [
       },
       {
         rideName: "Turn Baby Turn",
-        time: "5:45pm",
+        time: "5:45am",
         location: "Jet Fuel, 519 Parliament Street",
         pace: "28kph+ average",
       },
