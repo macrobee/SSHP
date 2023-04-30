@@ -264,19 +264,19 @@ const Rides = () => {
             </h4>
             <ul>
               <li className="ml-1">
-                <span className="font-semibold">Dismount Bike Shop</span>
+                <span className="font-semibold mr-[3px]">Dismount Bike Shop</span>
                 usually has Wednesday night co-ed gravel rides.
                 <a
                   href="https://www.instagram.com/dismount_to/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green font-bold"
+                  className="text-green font-bold hover:text-pink"
                 >
                   Check their Instagram for more information.
                 </a>
               </li>
               <li className="ml-1">
-                <span className="font-semibold">
+                <span className="font-semibold mr-[3px]">
                   Bateman’s Bike Company group
                 </span>
                 mountain bike rides are resuming this spring from their Laird
@@ -285,19 +285,19 @@ const Rides = () => {
                   href="https://www.batemansbikeco.com/articles/batemans-trail-group-rides-pg409.htm"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green font-bold"
+                  className="text-green font-bold hover:text-pink"
                 >
                   Check their site for more information.
                 </a>
               </li>
               <li className="ml-1">
-                <span className="font-semibold">Minii Adventures</span>
+                <span className="font-semibold mr-[3px]">Minii Adventures</span>
                 offers weekly mountain bike lessons and workshops.
                 <a
                   href="https://www.miniiadventures.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-green font-bold"
+                  className="text-green font-bold hover:text-pink"
                 >
                   Check out their site for more information.
                 </a>
