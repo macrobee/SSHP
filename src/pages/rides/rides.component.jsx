@@ -13,7 +13,8 @@ const rideList = [
         time: "6:00am",
         location: "Avenue/Bloor",
         pace: "n/a",
-        notes: "Gravel/trail ride/skills practice. 32mm+ tire width recommended."
+        notes:
+          "Gravel/trail ride/skills practice. 32mm+ tire width recommended.",
       },
     ],
   },
@@ -48,19 +49,24 @@ const rideList = [
         time: "5:45am",
         location: "High Park",
         pace: "n/a",
-        notes: "Beginner rides for new ‘sisters’ with focus on skills, paceline, rotating, turning/cornering, and more. Twice a month (or as needed).",
-      }, {
+        notes:
+          "Beginner rides for new ‘sisters’ with focus on skills, paceline, rotating, turning/cornering, and more. Twice a month (or as needed).",
+      },
+      {
         rideName: "HILLS HILLS HILLS on repeat",
         time: "6:00am until 7:15am",
         location: "High Park",
         pace: "25-27kph average",
-        notes: "The odd morning we will put this event together where we do some Ellis laps and High Park laps while we learn to ride and stay together as a group."
-      }, {
+        notes:
+          "The odd morning we will put this event together where we do some Ellis laps and High Park laps while we learn to ride and stay together as a group.",
+      },
+      {
         rideName: "Lift Me Up ...Hills",
         time: "6:30pm",
         location: "High Park",
         pace: "n/a",
-        notes: "West end hills in the PM. The goal will be elevation rather than speed, with an average speed of 25-27 km on flats."
+        notes:
+          "West end hills in the PM. The goal will be elevation rather than speed, with an average speed of 25-27 km on flats.",
       },
     ],
   },
@@ -72,15 +78,17 @@ const rideList = [
         time: "5:45am",
         location: "East End",
         pace: "n/a",
-        notes: "Check Strava to see which type of oats we're serving up each week."
+        notes:
+          "Check Strava to see which type of oats we're serving up each week.",
       },
       {
         rideName: "MGCC + SSHP",
         time: "5:50am",
         location: "High Park",
         pace: "26-28+ kph",
-        notes: "Must be a registered OCA SSHP member or MGCC member to join this ride. No exceptions."
-      }
+        notes:
+          "Must be a registered OCA SSHP member or MGCC member to join this ride. No exceptions.",
+      },
     ],
   },
   {
@@ -91,15 +99,16 @@ const rideList = [
         time: "6:00am",
         location: "High Park",
         pace: "20-23kph average",
-        notes: "Approx 20-30km ride starting from High Park."
+        notes: "Approx 20-30km ride starting from High Park.",
       },
       {
         rideName: "Far-East Friday",
         time: "6:00am/pm",
         location: "East End",
         pace: "20-22kph average",
-        notes: "Morning or evening ride (alternating weekly) starting near Danforth and Woodbine. Check Strava for details."
-      }
+        notes:
+          "Morning or evening ride (alternating weekly) starting near Danforth and Woodbine. Check Strava for details.",
+      },
     ],
   },
   {
@@ -110,7 +119,7 @@ const rideList = [
         time: "Later start",
         location: "n/a",
         pace: "20-23kph average",
-        notes: "Check Strava for details"
+        notes: "Check Strava for details",
       },
     ],
   },
@@ -122,7 +131,8 @@ const rideList = [
         time: "5:50am",
         location: "n/a",
         pace: "25+kph average depending on the group",
-        notes: "First Sunday of each month we may attend the MGCC Sunday Social coed ride. Pace is approx 25+ avg depending on the group. Must be a registered OCA SSHP member or MGCC member to join this ride. No exceptions. ",
+        notes:
+          "First Sunday of each month we may attend the MGCC Sunday Social coed ride. Pace is approx 25+ avg depending on the group. Must be a registered OCA SSHP member or MGCC member to join this ride. No exceptions. ",
       },
     ],
   },
@@ -162,7 +172,6 @@ const Rides = () => {
             Saddle Sister group rides are not sanctioned by the OCA.
           </motion.p>
 
-
           <motion.p
             className="italic text-justify"
             variants={animationVariants}
@@ -179,7 +188,7 @@ const Rides = () => {
             leaders/ride organizers assume any duty of care for ride
             participants.
           </motion.p>
-          <motion.h3 className="text-xl font-bold">
+          <motion.h3 variants={animationVariants} className="text-xl font-bold">
             2023 weekly ride schedule
           </motion.h3>
           {rideList.map((dayInfo) => {
@@ -188,16 +197,25 @@ const Rides = () => {
               const { rideName, time, location, pace, notes } = ride;
               return (
                 <motion.div variants={animationVariants}>
-                  <h4 className="text-base font-bold text-green">
-                    {rideName}
-                  </h4>
+                  <h4 className="text-base font-bold text-green">{rideName}</h4>
                   <div>
                     <p className="text-">
-                      <span className="font-semibold">Meeting time:</span> {time}
+                      <span className="font-semibold">Meeting time:</span>{" "}
+                      {time}
                     </p>
-                    <p className="text-"><span className="font-semibold">Location:</span> {location} </p>
-                    <p className="text-"><span className="font-semibold">Pace:</span> {pace}</p>
-                    {notes ? <p className="text-"><span className="font-semibold"> Notes: </span> <span className="italic"> {notes}</span></p> : null}
+                    <p className="text-">
+                      <span className="font-semibold">Location:</span>{" "}
+                      {location}{" "}
+                    </p>
+                    <p className="text-">
+                      <span className="font-semibold">Pace:</span> {pace}
+                    </p>
+                    {notes ? (
+                      <p className="text-">
+                        <span className="font-semibold"> Notes: </span>{" "}
+                        <span className="italic"> {notes}</span>
+                      </p>
+                    ) : null}
                   </div>
                 </motion.div>
               );
@@ -214,6 +232,88 @@ const Rides = () => {
               </motion.div>
             );
           })}
+          <motion.div
+            className="flex flex-col gap-1"
+            variants={animationVariants}
+          >
+            <h3 className="text-lg font-bold">Other rides and adventures</h3>
+            <p className="italic mb-1">
+              Check the Strava group for event details.{" "}
+            </p>
+            <h4 className="text-base font-bold text-green">
+              Try bikepacking June 10-11!
+            </h4>
+            <p className=" mb-1">
+              {" "}
+              Robyn will be hosting an introductory bikepacking overnight rally
+              on a fully paved route, see Strava event for details. More
+              adventures to come later this year.
+            </p>
+            <h4 className="text-base font-bold text-green">
+              100 km Coffee shop weekend rides
+            </h4>
+            <p className="mb-1">
+              {" "}
+              Check the strava event for details / Pace will alternate weekly as
+              well as the coffee shop.
+            </p>
+            <h4 className="text-base font-bold text-green">
+              Not seeing what you’re looking for? Want to try something
+              different? Check out the following Toronto bike shops and some of
+              their weekly rides:
+            </h4>
+            <ul>
+              <li className="ml-1">
+                <span className="font-semibold">Dismount Bike Shop</span>
+                usually has Wednesday night co-ed gravel rides.
+                <a
+                  href="https://www.instagram.com/dismount_to/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green font-bold"
+                >
+                  Check their Instagram for more information.
+                </a>
+              </li>
+              <li className="ml-1">
+                <span className="font-semibold">
+                  Bateman’s Bike Company group
+                </span>
+                mountain bike rides are resuming this spring from their Laird
+                location.
+                <a
+                  href="https://www.batemansbikeco.com/articles/batemans-trail-group-rides-pg409.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green font-bold"
+                >
+                  Check their site for more information.
+                </a>
+              </li>
+              <li className="ml-1">
+                <span className="font-semibold">Minii Adventures</span>
+                offers weekly mountain bike lessons and workshops.
+                <a
+                  href="https://www.miniiadventures.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-green font-bold"
+                >
+                  Check out their site for more information.
+                </a>
+              </li>
+            </ul>
+            <h4 className="text-base font-bold text-green">
+              Popular places we like to visit:
+            </h4>
+            <ul>
+              <li className="ml-1">Archtop</li>
+              <li className="ml-1">Tribeca</li>
+              <li className="ml-1">Back Road Coffee Roasters</li>
+            </ul>
+
+            <p>See you at the next ride!</p>
+          </motion.div>
         </motion.div>
       </SectionDiv>
     </AnimatePresence>
