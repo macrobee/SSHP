@@ -31,7 +31,7 @@ const Navbar = ({ navItems }) => {
     <Fragment>
       <div className="fixed z-40 bg-background w-full h-1/5 flex justify-between items-center p-1 md:h-75 md:pb-1/2 md:pt-1/2">
         <Link to={`/`} className="w-50 h-50">
-          <img className="" src="/sshp/SSHPlogo-min.png" alt="SSHP logo" />
+          <img className="" src="/sshp/SSHPlogo-min.png" alt="SSHP logo" height="50" width="50" />
         </Link>
         {isOpen ? (
           <CloseIcon
