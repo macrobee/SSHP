@@ -204,7 +204,7 @@ const Rides = () => {
                       {time}
                     </p>
                     <p className="text-">
-                      <span className="font-semibold">Location:</span>{" "}
+                      <span className="font-semibold">Start location:</span>{" "}
                       {location}{" "}
                     </p>
                     <p className="text-">

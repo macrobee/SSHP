@@ -96,11 +96,11 @@ const About = () => {
               >
                 (@saddlesisterscycling)
               </a>{" "}
-              to ask about how to join our DISCORD chat group (or email{" "}
+              or email{" "}
               <a href="mailto:info@saddlesisters.ca" className="text-green">
                 info@saddlesisters.ca
               </a>
-              )
+              
             </motion.p>
             <motion.p variants={pVariants}>
               If you are interested in joining our race team, please email

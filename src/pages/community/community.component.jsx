@@ -20,9 +20,9 @@ const eventsList = [
 
   {
     name: "Ride for Brain Health",
-    description: "On June 4, 2023, SSHP will be riding at the Baycrest Bike for Brain Health to support brain research. Join our team here: ",
+    description: "In June 2024, SSHP will be riding at the Baycrest Bike for Brain Health to support brain research. Join our team here: ",
     photoUrl: "/links/baycrest.png",
-    link: "https://baycrestbikeforbrainhealth.crowdchange.ca/16201/team/14825",
+    link: "https://baycrestbikeforbrainhealth.crowdchange.ca/42340/team/19300",
   },
 ];
 const affiliateLinks = [
